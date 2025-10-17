@@ -1,1 +1,132 @@
 
+</html><!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Entre Sierras y Sabores — Papagayos</title>
+  <meta name="description" content="Bodegón moderno en Papagayos. Menú fijo: entrada, cabra al horno de barro, postre de algarroba." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-mark">ES</div>
+      <div>
+        <div class="brand">Entre Sierras y Sabores</div>
+        <div class="muted">Bodegón moderno • Papagayos, San Luis</div>
+      </div>
+    </div>
+    <nav>
+      <button id="menuBtn" class="btn">Ver menú</button>
+      <button id="resBtn" class="btn">Reservar</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero-card">
+        <h1>Sabores serranos, técnica moderna</h1>
+        <p class="lead">Menú fijo de 3 pasos: entrada, <strong>cabrito al horno de barro</strong> como protagonista y postre de algarroba. Ingredientes 100% locales — experiencia íntima y cálida.</p>
+
+        <div class="menu-preview">
+          <div class="dish">
+            <div class="dot">🥟</div>
+            <div>
+              <h3>Empanadita puntana gourmet</h3>
+              <p class="muted">Carne de cabrito, cebolla caramelizada y aceitunas negras, salsa criolla moderna.</p>
+            </div>
+          </div>
+
+          <div class="dish">
+            <div class="dot">🔥</div>
+            <div>
+              <h3>Cabra al horno de barro</h3>
+              <p class="muted">Cocción lenta, manteca de peperina y papines serranos — el plato estrella.</p>
+            </div>
+          </div>
+
+          <div class="dish">
+            <div class="dot">🍯</div>
+            <div>
+              <h3>Dulce tentación de algarroba</h3>
+              <p class="muted">Mousse de algarroba, crocante de nueces y miel de la zona.</p>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <span class="tag">Solo 20–30 cubiertos</span>
+            <button id="readMore" class="btn ghost">Más detalles</button>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4>Enfoque</h4>
+          <p class="muted">Cocina local, horno de barro visible y proveedores de la región. Alternativa vegetariana disponible.</p>
+        </div>
+      </div>
+
+      <div class="hero-visual" role="img" aria-label="Horno de barro y paisaje serrano">
+        <div class="overlay">
+          <div class="tag">Plato estrella</div>
+          <h2 style="margin:8px 0 0">Cabra al horno de barro</h2>
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center;">
+            <div class="oven">
+              <div class="fire" aria-hidden="true"></div>
+            </div>
+            <div class="muted">Cocción lenta • Productores locales</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="cards" aria-label="Información del restaurante">
+      <article class="card">
+        <h3>Ambientación</h3>
+        <p class="muted">Rústico moderno: piedra, madera, iluminación cálida y detalles serranos. Música instrumental folclórica de fondo.</p>
+      </article>
+
+      <article class="card">
+        <h3>Proveedores</h3>
+        <p class="muted">Cabras de crianza local, miel y frutas de la región, vinos puntanos y mendocinos.</p>
+      </article>
+
+      <article class="card">
+        <h3>Operación</h3>
+        <p class="muted">Capacidad reducida para atención personalizada. Cocina semiabierta con horno de barro visible para los comensales.</p>
+      </article>
+    </section>
+
+    <section style="margin-top:18px" class="card">
+      <h3>Receta simplificada: Cabra al horno de barro (para 6 personas)</h3>
+      <ol class="muted">
+        <li>Marinar la cabra con vino blanco, ajo, romero y sal por 6-8 horas.</li>
+        <li>Colocar en horno de barro precalentado a 180–200 °C y cocinar lentamente 3–4 horas.</li>
+        <li>Al final, pincelar con manteca de peperina y tomillo; dorar 10–15 min.</li>
+        <li>Acompañar con papines serranos y chutney de durazno.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <div class="muted">Entre Sierras y Sabores — Papagayos, San Luis · Menú fijo · Contacto: +54 9 266 000 0000</div>
+  </footer>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="dialog">
+      <h3>Reservar mesa</h3>
+      <p class="muted">Completa tus datos y te confirmamos por WhatsApp.</p>
+      <form id="resForm">
+        <label class="muted">Nombre<br><input name="name" type="text" required></label>
+        <label class="muted">Teléfono<br><input name="phone" type="tel" required></label>
+        <label class="muted">Fecha y hora<br><input name="datetime" type="datetime-local" required></label>
+        <div class="actions">
+          <button type="button" id="cancel" class="btn ghost">Cancelar</button>
+          <button type="submit" class="btn">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
