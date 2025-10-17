@@ -1,0 +1,138 @@
+:root {
+  --color-principal: #00796b;
+  --color-secundario: #e0f2f1;
+  --color-texto: #333;
+  --color-blanco: #ffffff;
+  --color-acento: #ffb703;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--color-secundario);
+  color: var(--color-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---- Encabezado Hero ---- */
+.hero {
+  position: relative;
+  height: 45vh;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-blanco);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ---- Contenido principal ---- */
+.container {
+  flex: 1;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-principal);
+  font-size: 1.8rem;
+}
+
+/* ---- Grid de proyectos ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--color-blanco);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: var(--color-principal);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  text-decoration: none;
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.card a:hover {
+  background: var(--color-acento);
+  color: #000;
+}
+
+/* ---- Footer ---- */
+footer {
+  text-align: center;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
