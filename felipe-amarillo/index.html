@@ -1,13 +1,121 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyecto de Felipe Amarillo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Éclat Essence — Tu esencia, tu brillo</title>
+<meta name="description" content="Éclat Essence - Casa de perfumes. Fragancias Urban,
+Sport, Classique y Night.">
+<link
+href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family
+=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Proyecto de Felipe Amarillo</h1>
-  <p>Bienvenido a mi proyecto web.</p>
+<header>
+<div class="brand">
+<div class="logo-badge">EE</div>
+<div class="logo-text">
+<h1>Éclat Essence</h1>
+<p>Tu esencia, tu brillo</p>
+</div>
+</div>
+<nav>
+<a href="#home">Inicio</a>
+<a href="#collections">Colecciones</a>
+<a href="#shop">Tienda</a>
+<a href="#contact">Contacto</a>
+<button id="open-cart" class="btn">Carrito <span id="cart-count"
+class="cart-badge">0</span></button>
+</nav>
+</header>
+<main>
+<section id="home" class="hero">
+<div class="hero-left">
+<h2>Éclat Essence — fragancias que definen momentos</h2>
+<p class="lead">Casa de perfumes de lujo contemporánea. Elegimos ingredientes
+premium y diseñamos fragancias pensadas para distintos estilos de vida: urbano, deportivo,
+clásico y nocturno.</p>
+<div class="cta">
+<button class="btn primary" onclick="scrollToSection('shop')">Visitar Tienda</button>
+<button class="btn" onclick="scrollToSection('collections')">Ver Colecciones</button>
+</div>
+</div>
+<div class="hero-right card">
+<!-- Reemplaza con imágenes generadas por IA si las tienes -->
+
+<img src="images/placeholder-hero.jpg" alt="Frasco Éclat" id="hero-img">
+</div>
+</section>
+<section id="collections" class="section">
+<h3>Colecciones</h3>
+<p class="small">Cada colección está pensada para un estilo de vida. Explora y
+encuentra la que te representa.</p>
+<div class="grid">
+<div class="product card">
+<img src="images/urban.jpg" alt="Éclat Urban">
+<h4>Éclat Urban</h4>
+<p class="small">Vibrante, moderno y urbano — notas cítricas y amaderadas.</p>
+</div>
+<div class="product card">
+<img src="images/sport.jpg" alt="Éclat Sport">
+<h4>Éclat Sport</h4>
+<p class="small">Energético y fresco — ideal para movimiento y día a día.</p>
+</div>
+<div class="product card">
+<img src="images/classique.jpg" alt="Éclat Classique">
+<h4>Éclat Classique</h4>
+<p class="small">Sofisticación atemporal — notas florales y ambarinas.</p>
+</div>
+<div class="product card">
+<img src="images/night.jpg" alt="Éclat Night">
+<h4>Éclat Night</h4>
+<p class="small">Misterioso y seductor — notas intensas y cuero ligero.</p>
+</div>
+</div>
+</section>
+<section id="shop" class="section">
+<h3>Tienda</h3>
+<p class="small">Selecciona tu fragancia y agrégala al carrito. Este demo simula el
+proceso de compra con JavaScript.</p>
+<div id="products" class="grid"></div>
+</section>
+<section id="contact" class="section card">
+<h3>Contacto</h3>
+<p class="small">¿Querés colaborar o saber más? Escribinos.</p>
+<form id="contact-form">
+<input type="text" name="name" placeholder="Nombre" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" rows="4" placeholder="Mensaje"></textarea>
+<button class="btn primary" type="submit">Enviar</button>
+</form>
+
+</section>
+</main>
+<footer>
+<div>
+<strong>Éclat Essence</strong>
+<div class="small">Diseño: elegante • Colores: negro, dorado y blanco perla</div>
+</div>
+<div class="small">© 2025 Éclat Essence</div>
+</footer>
+<!-- Modal carrito -->
+<div id="cart-modal" class="modal" aria-hidden="true">
+<div class="panel card">
+<div>
+<h4>Carrito</h4>
+<div id="cart-items"></div>
+</div>
+<div>
+<h4>Resumen</h4>
+<div class="small">Total: <span id="cart-total">$0</span></div>
+<div style="margin-top:12px">
+<button class="btn" id="close-cart">Seguir comprando</button>
+<button class="btn primary" id="checkout">Finalizar compra</button>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
