@@ -7,8 +7,7 @@ const estudiantes = [
   "María José Bianchi",
   "Lucyla Sosa",
   "Mia Tolosa",
-  "Mabel Vargas",
-  "Turismo Papagayos" // agregado correctamente
+  "Mabel Vargas"
 ];
 
 // Contenedor del grid
