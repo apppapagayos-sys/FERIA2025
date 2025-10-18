@@ -3,37 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escuela N°225 Maestro Pio Rosario Flores - Proyectos Web - Feria de Ciencias 2025</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Escuela N°225 Maestro Pio Rosario Flores - Proyectos Web 2025</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-principal: #2a7b69;
+      --color-secundario: #f4f4f4;
+      --color-texto: #333;
+      --color-destacado: #ffb703;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: var(--color-secundario);
+      color: var(--color-texto);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: var(--color-principal);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    header p {
+      margin-top: .5rem;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+    main {
+      flex: 1;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .card a {
+      text-decoration: none;
+      color: var(--color-principal);
+      font-weight: 600;
+      display: block;
+      margin-top: .5rem;
+    }
+    footer {
+      text-align: center;
+      background-color: var(--color-principal);
+      color: white;
+      padding: 1rem;
+      font-size: .9rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Escuela N°225 Maestro Pio Rosario Flores</h1>
-      <p>Proyectos Web - Feria de Ciencias 2025</p>
-    </div>
+  <header>
+    <h1>Escuela N°225 Maestro Pio Rosario Flores</h1>
+    <p>Proyectos Web 2025</p>
   </header>
 
   <main>
-    <section class="container">
-      <h2>Galería de Proyectos</h2>
-      <div class="grid" id="projectGrid">
-        <!-- Las tarjetas se generan dinámicamente con JS -->
+    <h2 style="text-align:center; margin-bottom: 2rem;">Galería de proyectos de los estudiantes</h2>
+    <div class="grid">
+      <!-- 🧩 Ejemplo de tarjetas de proyectos -->
+      <div class="card">
+        <h3>Juan Gómez</h3>
+        <a href="juan-gomez/index.html" target="_blank">Ver proyecto</a>
       </div>
-    </section>
+      <div class="card">
+        <h3>María Pérez</h3>
+        <a href="maria-perez/index.html" target="_blank">Ver proyecto</a>
+      </div>
+      <div class="card">
+        <h3>Luis Fernández</h3>
+        <a href="luis-fernandez/index.html" target="_blank">Ver proyecto</a>
+      </div>
+      <!-- Agregá más tarjetas según tus estudiantes -->
+    </div>
   </main>
 
   <footer>
-    <p><strong>Profesora:</strong> Vera Holzmann · 
-       <strong>Profesor:</strong> Sebastián Keller · 
-       <strong>Profesor:</strong> Iván Hernández · 
-       <strong>Regente:</strong> Vanesa Quiroga</p>
-    <p><strong>Financiamiento:</strong> Municipalidad de Papagayos · 
-       <strong>Intendente:</strong> José Luis Gauna</p>
-    <p>© 2025 Escuela N°225 Maestro Pio Rosario Flores</p>
+    © 2025 Escuela N°225 Maestro Pio Rosario Flores · Proyecto de Desarrollo Web
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
