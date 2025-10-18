@@ -1,39 +1,34 @@
-  <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escuela N°225 Maestro Pio Rosario Flores - Proyectos Web - Feria de Ciencias 2025</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Escuela N°225 Maestro Pio Rosario Flores</h1>
-      <p>Proyectos Web - Feria de Ciencias 2025</p>
-    </div>
-  </header>
+// Lista de estudiantes (ordenados alfabéticamente por apellido)
+const estudiantes = [
+  "Felipe Amarillo",
+  "Leonardo Andrada",
+  "Ysabella Barraza",
+  "Antonella Bertolini",
+  "María José Bianchi",
+  "Lucyla Sosa",
+  "Mia Tolosa",
+  "Mabel Vargas",
+  "Turismo Papagayos"
+];
 
-  <main>
-    <section class="container">
-      <h2>Galería de Proyectos</h2>
-      <div class="grid" id="projectGrid">
-        <!-- Las tarjetas se generan dinámicamente con JS -->
-      </div>
-    </section>
-  </main>
+// Contenedor del grid
+const grid = document.getElementById("projectGrid");
 
-  <footer>
-    <p><strong>Profesora:</strong> Vera Holzmann · 
-       <strong>Profesor:</strong> Sebastián Keller · 
-       <strong>Profesor:</strong> Iván Hernández · 
-       <strong>Regente:</strong> Vanesa Quiroga</p>
-    <p><strong>Financiamiento:</strong> Municipalidad de Papagayos · 
-       <strong>Intendente:</strong> José Luis Gauna</p>
-    <p>© 2025 Escuela N°225 Maestro Pio Rosario Flores</p>
-  </footer>
+// Crear dinámicamente las tarjetas
+estudiantes.forEach(nombre => {
+  const carpeta = nombre
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // quita tildes
+    .replace(/\s+/g, "-"); // reemplaza espacios por guiones
 
-  <script src="script.js"></script>
-</body>
-</html>
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+    <h3>${nombre}</h3>
+    <a href="${carpeta}/index.html" target="_blank">Ver proyecto</a>
+  `;
+
+  grid.appendChild(card);
+});
