@@ -8,7 +8,7 @@ const estudiantes = [
   "Lucyla Sosa",
   "Mia Tolosa",
   "Mabel Vargas",
-  "Turismo Papagayos" // 👈 Proyecto adicional
+  "Turismo Papagayos" // Proyecto institucional
 ];
 
 // Contenedor del grid
@@ -25,10 +25,20 @@ estudiantes.forEach(nombre => {
   const card = document.createElement("div");
   card.className = "card";
 
-  card.innerHTML = `
-    <h3>${nombre}</h3>
-    <a href="${carpeta}/index.html" target="_blank">Ver proyecto</a>
-  `;
+  // Detectar el proyecto institucional
+  if (nombre === "Turismo Papagayos") {
+    card.classList.add("institucional");
+    card.innerHTML = `
+      <h3>${nombre}</h3>
+      <span class="badge">Proyecto Institucional</span>
+      <a href="${carpeta}/index.html" target="_blank">Ver proyecto</a>
+    `;
+  } else {
+    card.innerHTML = `
+      <h3>${nombre}</h3>
+      <a href="${carpeta}/index.html" target="_blank">Ver proyecto</a>
+    `;
+  }
 
   grid.appendChild(card);
 });
