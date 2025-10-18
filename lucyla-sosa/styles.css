@@ -1,1 +1,165 @@
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #fffaf3;
+  color: #333;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+h2 {
+  color: #ff8c42;
+}
+
+/* Encabezado */
+.header {
+  text-align: center;
+  background: linear-gradient(135deg, #ff8c42, #ffb347);
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background-color: #fff;
+  color: #ff8c42;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffd8b2;
+}
+
+/* Navegación */
+.navbar {
+  background-color: #ff8c42;
+  text-align: center;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Secciones */
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fffdf9;
+}
+
+.img-section {
+  max-width: 80%;
+  border-radius: 15px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Tarjetas */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: #ff8c42;
+}
+
+/* Beneficios */
+.benefits ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.benefits li {
+  background-color: #fff6e9;
+  border-left: 5px solid #ff8c42;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #ff8c42;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
 
