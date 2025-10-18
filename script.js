@@ -25,11 +25,11 @@ estudiantes.forEach(nombre => {
   const card = document.createElement("div");
   card.className = "card";
 
-  // Detectar el proyecto institucional
+  // Destacar el proyecto institucional
   if (nombre === "Turismo Papagayos") {
     card.classList.add("institucional");
     card.innerHTML = `
-      <h3>${nombre}</h3>
+      <h3>🌴 ${nombre}</h3>
       <span class="badge">Proyecto Institucional</span>
       <a href="${carpeta}/index.html" target="_blank">Ver proyecto</a>
     `;
