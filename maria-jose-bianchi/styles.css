@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sierras del Sol - Complejo de Cabañas</title>
+<!-- Vinculamos el CSS externo -->
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<!-- ====== HEADER ====== -->
+<header>
+<h1>Sierras del Sol</h1>
+<p>Tu refugio al pie de las sierras en Papagayos</p>
+<button onclick="scrollToSection('cabanas')">Conocé nuestras cabañas</button>
+</header>
+<!-- ====== NAV ====== -->
+<nav>
+<a href="#cabanas">Cabañas</a>
+<a href="#servicios">Servicios</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<!-- ====== SECCIÓN DE CABAÑAS ====== -->
+<section id="cabanas">
+<h2>Nuestras Cabañas</h2>
+<div class="cabanas">
+<div class="cabana">
+<img
+src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?fit=crop&w=800&q=80"
+alt="Cabaña 1">
+<div class="cabana-content">
+<h3>Cabaña 1</h3>
+<p>2 habitaciones (1 matrimonial y 2 individuales), baño completo, cocina
+
+equipada, sala-comedor y deck con parrilla privada.</p>
+</div>
+</div>
+<div class="cabana">
+<img
+src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?fit=crop&w=800&q
+=80" alt="Cabaña 2">
+<div class="cabana-content">
+
+<h3>Cabaña 2</h3>
+<p>2 habitaciones (1 matrimonial y 2 individuales), baño completo, cocina
+
+equipada, sala-comedor y deck con parrilla privada.</p>
+</div>
+</div>
+<div class="cabana">
+<img
+src="https://images.unsplash.com/photo-1560448070-62a82e8c0d04?fit=crop&w=800&q=80
+" alt="Cabaña 3">
+<div class="cabana-content">
+<h3>Cabaña 3</h3>
+<p>2 habitaciones (1 matrimonial y 2 individuales), baño completo, cocina
+
+equipada, sala-comedor y deck con parrilla privada.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ====== SECCIÓN DE SERVICIOS ====== -->
+<section id="servicios">
+<h2>Servicios del Complejo</h2>
+<ul>
+<li>Pileta para adultos y niños</li>
+<li>Cochera para 4 vehículos</li>
+<li>Wi-Fi en todas las cabañas</li>
+<li>Limpieza y mantenimiento</li>
+<li>Seguridad e iluminación nocturna</li>
+<li>Jardines y senderos</li>
+<li>Deck privado con parrilla en cada cabaña</li>
+</ul>
+</section>
+<!-- ====== SECCIÓN DE CONTACTO ====== -->
+<section id="contacto">
+<h2>Contactanos</h2>
+<p>Para reservas y consultas:</p>
+<p>Email: info@sierrasdelsol.com.ar</p>
+<p>Teléfono: +54 9 266 123-4567</p>
+</section>
+<!-- ====== FOOTER ====== -->
+<footer>
+&copy; 2025 Sierras del Sol - Todos los derechos reservados
+</footer>
+<!-- Vinculamos el JS externo -->
+<script src="script.js"></script>
+</body>
+
+</html>
