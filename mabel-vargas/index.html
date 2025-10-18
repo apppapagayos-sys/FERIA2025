@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Salud Cerca - Telemedicina Comunitaria</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Salud Cerca</h1>
+        <p>Tu salud, cerca de casa en Papagayos</p>
+    </header>
+
+    <main>
+        <section id="turno">
+            <h2>Solicitá tu turno médico</h2>
+            <form action="TurnoServlet" method="POST" id="turnoForm">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required />
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="especialidad">Especialidad:</label>
+                <select id="especialidad" name="especialidad" required>
+                    <option value="">Seleccioná una</option>
+                    <option value="Médico General">Médico General</option>
+                    <option value="Psicólogo">Psicólogo</option>
+                    <option value="Nutricionista">Nutricionista</option>
+                </select>
+
+                <label for="fecha">Fecha preferida:</label>
+                <input type="date" id="fecha" name="fecha" required />
+
+                <button type="submit">Solicitar Turno</button>
+            </form>
+            <div id="mensajeTurno">
+                <!-- Aquí se mostrará el mensaje de respuesta del servidor -->
+                <!-- Para un proyecto real, se podría redirigir o mostrar mensaje dinámico -->
+            </div>
+        </section>
+
+        <section id="asistente">
+            <h2>Asistente Virtual de Salud</h2>
+            <form action="AsistenteServlet" method="POST" id="asistenteForm">
+                <input type="text" id="pregunta" name="pregunta" placeholder="Escribí tu consulta médica aquí..." required />
+                <button type="submit">Consultar</button>
+            </form>
+            <div id="respuesta">
+                <!-- Mensaje de respuesta del asistente -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Salud Cerca - Papagayos, San Luis</p>
+    </footer>
+</body>
+</html>
 
