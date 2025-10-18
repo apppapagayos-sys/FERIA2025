@@ -7,7 +7,8 @@ const estudiantes = [
   "María José Bianchi",
   "Lucyla Sosa",
   "Mia Tolosa",
-  "Mabel Vargas"
+  "Mabel Vargas",
+  "Turismo Papagayos" // 👈 Proyecto adicional
 ];
 
 // Contenedor del grid
