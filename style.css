@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
 }
 
-/* ---- Encabezado limpio ---- */
+/* ---- Encabezado ---- */
 .hero {
   background: linear-gradient(135deg, var(--color-principal), #009688);
   color: var(--color-blanco);
