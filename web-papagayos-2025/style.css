@@ -60,6 +60,7 @@ nav button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 nav button:hover {
@@ -173,6 +174,7 @@ h2 {
 #prev {
   left: 10px;
 }
+
 #next {
   right: 10px;
 }
@@ -223,16 +225,25 @@ footer {
     display: block;
   }
 }
-/* Botones dentro de <a> */
+
+/* 🔹 Corrección final para enlaces con botones */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 a button {
   all: unset;
+  display: inline-block;
   background: var(--verde);
   color: white;
   padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  transition: 0.3s;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 a button:hover {
