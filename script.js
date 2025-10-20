@@ -8,7 +8,7 @@ const estudiantes = [
   "Lucyla Sosa",
   "Mia Tolosa",
   "Mabel Vargas",
-  "Turismo Papagayos"
+  "Web Papagayos 2025"
 ];
 
 // Contenedor del grid
