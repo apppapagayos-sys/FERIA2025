@@ -1,134 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Papagayos - Turismo y Naturaleza</title>
-  <meta name="description" content="Papagayos: naturaleza, descanso, gastronomía, cultura y circuito paranormal.">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/app.css">
-  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <div class="brand">
-        <img src="assets/icons/logo_papagayos.jpg" alt="Logo Papagayos" class="logo">
-        <div class="brand-text">
-          <h1>Papagayos</h1>
-          <small>Turismo y Naturaleza</small>
-        </div>
-      </div>
-
-      <button id="btn-hamb" class="hamb" aria-label="Abrir menú">☰</button>
-
-      <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#naturaleza">Naturaleza</a>
-        <a href="#mapa">Mapa</a>
-        <a href="#gastronomia">Gastronomía</a>
-        <a href="#cultura">Cultura</a>
-        <a href="#historia">Historia</a>
-        <a href="#paranormal">Circuito Paranormal</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+  <header>
+    <div class="logo">
+      <img src="assets/icons/logo_papagayos.jpg" alt="Logo Papagayos" />
+      <h1>Papagayos</h1>
     </div>
+    <button id="menu-btn">☰</button>
+    <nav id="nav">
+      <button onclick="scrollToSection('inicio')">Inicio</button>
+      <button onclick="scrollToSection('naturaleza')">Naturaleza</button>
+      <button onclick="scrollToSection('mapa')">Mapa</button>
+      <button onclick="scrollToSection('gastronomia')">Gastronomía</button>
+      <button onclick="scrollToSection('cultura')">Cultura</button>
+      <button onclick="scrollToSection('historia')">Historia</button>
+      <button onclick="scrollToSection('paranormal')">Paranormal</button>
+      <button onclick="scrollToSection('contacto')">Contacto</button>
+    </nav>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="inicio" class="hero" style="background-image:url('assets/images/1118.jpg')">
-      <div class="hero-filter">
-        <div class="wrap hero-content">
-          <h2>Bienvenidos a Papagayos</h2>
-          <p class="lead">Papagayos, donde la naturaleza cuenta su historia.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#naturaleza">Explorar naturaleza</a>
-            <a class="btn ghost" href="#paranormal">Circuito Paranormal</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Naturaleza -->
-    <section id="naturaleza" class="section">
-      <div class="wrap">
-        <h3>Conexión con la Naturaleza</h3>
-        <p>Arroyo, sierras, palmeras Caranday y senderos para todos los niveles. Papagayos es paz, observación de aves y contemplación.</p>
-      </div>
-    </section>
-
-    <!-- Mapa -->
-    <section id="mapa" class="section">
-      <div class="wrap">
-        <h3>Mapa interactivo</h3>
-        <p>Seleccioná un punto para ubicarlo en el mapa.</p>
-        <div id="map" class="map"></div>
-        <div id="map-controls" class="map-controls" aria-hidden="false"></div>
-      </div>
-    </section>
-
-    <!-- Gastronomía -->
-    <section id="gastronomia" class="section alt">
-      <div class="wrap">
-        <h3>Gastronomía típica</h3>
-        <p>Empanadas criollas, cabrito, pan casero y dulces regionales en comedores y restaurantes familiares.</p>
-
-        <div id="carousel" class="carousel" aria-roledescription="carousel">
-          <button class="carousel-btn prev" aria-label="Anterior">‹</button>
-          <div class="carousel-track" id="carousel-track">
-            <!-- imágenes cargadas dinámicamente por app.js -->
-          </div>
-          <button class="carousel-btn next" aria-label="Siguiente">›</button>
-          <div class="carousel-dots" id="carousel-dots" role="tablist"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cultura -->
-    <section id="cultura" class="section">
-      <div class="wrap">
-        <h3>Cultura, fiestas y eventos</h3>
-        <p>Patronales, jineteadas, la Fiesta de la Palmera Caranday y encuentros culturales: fechas para compartir y conservar tradiciones.</p>
-      </div>
-    </section>
-
-    <!-- Historia -->
-    <section id="historia" class="section alt">
-      <div class="wrap">
-        <h3>Historia y patrimonio</h3>
-        <p>La vida serrana y la memoria comunitaria que han dado forma al pueblo y a sus costumbres.</p>
-      </div>
-    </section>
-
-    <!-- Paranormal -->
-    <section id="paranormal" class="section">
-      <div class="wrap">
-        <h3>Circuito Paranormal — “El pueblo de las brujas”</h3>
-        <p>Relatos anónimos y respetados por la comunidad que suman una propuesta turística singular. Aquí podés leer los relatos tal como nos los contaron.</p>
-
-        <div class="stories" id="stories">
-          <!-- historias inyectadas por app.js (ya editadas según tu texto) -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="section alt">
-      <div class="wrap">
-        <h3>Contacto y emergencias</h3>
-        <p>Oficina de Turismo — WhatsApp: <a class="link" href="https://wa.me/5492656481868" target="_blank" rel="noopener">+54 9 2656 481868</a></p>
-        <p>Formulario de consultas: <a id="gform-link" href="#" class="link">Formulario Google (pegar enlace)</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>© 2025 Papagayos — Desarrollo: Estudiantes y docentes</small>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h2>Bienvenidos a Papagayos</h2>
+      <p>Donde la naturaleza cuenta su historia.</p>
     </div>
+  </section>
+
+  <!-- NATURALEZA -->
+  <section id="naturaleza" class="section">
+    <h2>Conexión con la Naturaleza</h2>
+    <p>
+      El arroyo, las sierras y las palmeras Caranday invitan al descanso y la
+      aventura. Senderos, miradores y paisajes únicos te esperan en Papagayos.
+    </p>
+  </section>
+
+  <!-- MAPA -->
+  <section id="mapa" class="section">
+    <h2>Mapa Interactivo</h2>
+    <p>Explorá los principales puntos turísticos y de interés del pueblo.</p>
+    <div id="map"></div>
+
+    <div class="map-buttons">
+      <button onclick="centrarMapa(-32.676357593243154, -64.98015725138869)">
+        Camping Municipal
+      </button>
+      <button onclick="centrarMapa(-32.68166593499375, -64.96792188822933)">
+        Sendero Principal
+      </button>
+      <button onclick="centrarMapa(-32.67443869375519, -64.98917874386407)">
+        Sala de Primeros Auxilios
+      </button>
+      <button onclick="centrarMapa(-32.674775098481895, -64.99223512095541)">
+        Cuartel de Bomberos
+      </button>
+      <button onclick="centrarMapa(-32.675435315762094, -64.9905628812799)">
+        Municipalidad
+      </button>
+    </div>
+  </section>
+
+  <!-- GASTRONOMÍA -->
+  <section id="gastronomia" class="section alt">
+    <h2>Gastronomía Típica</h2>
+    <p>
+      Disfrutá de los sabores locales: comidas caseras, dulces regionales y la
+      calidez de su gente.
+    </p>
+
+    <div class="carousel">
+      <div class="slides">
+        <img src="assets/images/1118.jpg" alt="Papagayos" />
+        <img src="assets/images/01.jpg" alt="Paisaje" />
+        <img src="assets/images/02.jpg" alt="Naturaleza" />
+      </div>
+      <button id="prev">‹</button>
+      <button id="next">›</button>
+    </div>
+  </section>
+
+  <!-- CULTURA -->
+  <section id="cultura" class="section">
+    <h2>Cultura y Fiestas</h2>
+    <p>
+      Jineteadas, fiestas patronales y la Fiesta de la Palmera Caranday:
+      tradición y comunidad en cada celebración.
+    </p>
+  </section>
+
+  <!-- HISTORIA -->
+  <section id="historia" class="section alt">
+    <h2>Historia del Pueblo</h2>
+    <p>
+      Las raíces de Papagayos se entrelazan con las tradiciones serranas, el
+      trabajo de su gente y los relatos que siguen vivos en la memoria
+      colectiva.
+    </p>
+  </section>
+
+  <!-- PARANORMAL -->
+  <section id="paranormal" class="section">
+    <h2>Circuito Paranormal</h2>
+    <p>
+      Conocé las historias más misteriosas de Papagayos, narradas por pobladores
+      del lugar.
+    </p>
+
+    <article class="story">
+      <h3>Bola de luz blanca</h3>
+      <p>
+        Dos amigos viajaban hacia una jineteada en 2023 cuando una esfera blanca
+        los acompañó silenciosamente por la ruta hasta desaparecer sin dejar
+        rastro.
+      </p>
+    </article>
+
+    <article class="story">
+      <h3>La mujer de blanco</h3>
+      <p>
+        En 2008, un jinete vio a una mujer vestida de blanco que subió a su
+        caballo. Al llegar al Recuerdo, la figura había desaparecido.
+      </p>
+    </article>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section alt">
+    <h2>Contacto</h2>
+    <p>Oficina de Turismo de Papagayos</p>
+    <a href="https://wa.me/5492656481868" target="_blank" class="btn"
+      >WhatsApp</a
+    >
+  </section>
+
+  <footer>
+    <p>© 2025 Papagayos — Proyecto educativo turístico</p>
   </footer>
 
-  <script src="assets/js/app.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
