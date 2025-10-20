@@ -1,1 +1,77 @@
+/* app.css - estética natural y clara (Poppins) */
+
+/* Variables de color */
+:root{
+  --green: #3C7A5A;
+  --green-dark: #2e5d44;
+  --beige: #F3EFE0;
+  --gold: #D4AF37;
+  --text:#21342a;
+  --muted:#6b7a6e;
+  --maxw:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#fbfbf8 0%, #f2f0ea 100%)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:18px}
+
+/* Header */
+.site-header{background:rgba(255,255,255,0.92);backdrop-filter: blur(3px);position:sticky;top:0;z-index:80;border-bottom:1px solid rgba(60,122,90,0.08)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:54px;border-radius:8px;object-fit:cover}
+.brand-text h1{margin:0;font-size:1.05rem;color:var(--green-dark)}
+.brand-text small{font-size:0.8rem;color:var(--muted)}
+
+/* nav */
+.main-nav{display:flex;gap:8px;align-items:center}
+.main-nav a{text-decoration:none;color:var(--text);padding:8px 10px;border-radius:8px;font-weight:600}
+.main-nav a:hover{background:rgba(60,122,90,0.08);color:var(--green-dark)}
+.hamb{display:none;background:none;border:0;font-size:22px;color:var(--green-dark)}
+
+/* Hero */
+.hero{height:50vh;min-height:340px;background-size:cover;background-position:center;display:flex;align-items:flex-end}
+.hero-filter{width:100%;background:linear-gradient(180deg,rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.45) 100%);padding:36px 0}
+.hero-content{color:white;padding:24px}
+.lead{font-size:1.05rem;opacity:0.95}
+.hero-actions{margin-top:12px;display:flex;gap:8px}
+.btn{display:inline-block;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--green);color:white}
+.btn.primary:hover{background:var(--green-dark)}
+.btn.ghost{background:transparent;color:white;border:2px solid rgba(255,255,255,0.15)}
+
+/* Sections */
+.section{padding:28px 0}
+.section.alt{background:linear-gradient(180deg, rgba(243,239,224,0.8), rgba(255,255,255,0.6));border-top:1px solid rgba(0,0,0,0.02)}
+h3{margin:0 0 8px;color:var(--green-dark)}
+
+/* Map */
+.map{height:360px;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.06)}
+
+/* Carousel */
+.carousel{position:relative;margin-top:16px}
+.carousel-track{display:flex;gap:8px;overflow:hidden;border-radius:10px;height:220px}
+.carousel-track img{width:100%;height:100%;object-fit:cover;flex:0 0 100%}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.85);border:0;padding:8px 12px;border-radius:8px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.carousel-btn.prev{left:8px}
+.carousel-btn.next{right:8px}
+.carousel-dots{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.carousel-dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(0,0,0,0.15);cursor:pointer}
+.carousel-dots button.active{background:var(--green)}
+
+/* Stories */
+.stories{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.story{background:white;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.04);border-left:4px solid var(--green)}
+.story h4{margin:0 0 6px}
+
+/* Footer */
+.site-footer{padding:18px 0;background:transparent;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media(max-width:900px){
+  .main-nav{display:none}
+  .hamb{display:block}
+  .hero{height:44vh}
+  .carousel-track{height:180px}
+}
 
