@@ -223,3 +223,19 @@ footer {
     display: block;
   }
 }
+/* Botones dentro de <a> */
+a button {
+  all: unset;
+  background: var(--verde);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+a button:hover {
+  background: var(--dorado);
+  transform: scale(1.05);
+}
