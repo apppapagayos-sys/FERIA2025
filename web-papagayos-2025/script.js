@@ -44,7 +44,8 @@ const lugares = [
   ["Acceso al arroyo", -32.67871522849654, -64.98240534153598],
   ["SUM Municipal",-32.67411402758061, -64.98945150465131],
   ["Campo Deportivo Club Papagayos",-32.677929942273124, -64.98046943122368],
-];
+  ["Cajero automático Banco Nación", -32.675435315762094, -64.9905628812799],
+ ];
 
 lugares.forEach(([nombre, lat, lon]) => {
   L.marker([lat, lon]).addTo(map).bindPopup(`<strong>${nombre}</strong>`);
