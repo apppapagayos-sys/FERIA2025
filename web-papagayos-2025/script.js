@@ -32,7 +32,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const lugares = [
-  ["Oficina de Turismo", -32.6759, -64.9845],
+  ["Oficina de Turismo", -32.67593912959237, -64.9827573475263],
   ["Sala de Primeros Auxilios", -32.67443869375519, -64.98917874386407],
   ["Cuartel de Bomberos", -32.674775098481895, -64.99223512095541],
   ["Municipalidad", -32.675435315762094, -64.9905628812799],
