@@ -12,20 +12,32 @@ function scrollToSection(id) {
   nav.classList.remove("show");
 }
 
-// Carrusel simple
-const slides = document.querySelector(".slides");
-const images = document.querySelectorAll(".slides img");
-let index = 0;
+/* =========================
+   CARRUSELES AUTOMÁTICOS
+========================= */
+document.querySelectorAll(".carousel").forEach((carousel) => {
+  const slides = carousel.querySelector(".slides");
+  const images = carousel.querySelectorAll(".slides img");
+  const next = carousel.querySelector(".next");
+  const prev = carousel.querySelector(".prev");
+  let index = 0;
 
-document.getElementById("next").onclick = () => moveSlide(1);
-document.getElementById("prev").onclick = () => moveSlide(-1);
+  function moveSlide(step) {
+    index = (index + step + images.length) % images.length;
+    slides.style.transform = `translateX(${-index * 100}%)`;
+  }
 
-function moveSlide(step) {
-  index = (index + step + images.length) % images.length;
-  slides.style.transform = `translateX(${-index * 100}%)`;
-}
+  // Botones manuales
+  next.addEventListener("click", () => moveSlide(1));
+  prev.addEventListener("click", () => moveSlide(-1));
 
-// Mapa Leaflet
+  // Cambio automático cada 4 segundos
+  setInterval(() => moveSlide(1), 4000);
+});
+
+/* =========================
+   MAPA LEAFLET
+========================= */
 const map = L.map("map").setView([-32.6759, -64.9845], 13);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
@@ -42,13 +54,13 @@ const lugares = [
   ["Plaza Sarmiento", -32.67512361961328, -64.98894588252935],
   ["Policía", -32.67545456383126, -64.9904955544179],
   ["Acceso al arroyo", -32.67871522849654, -64.98240534153598],
-  ["SUM Municipal",-32.67411402758061, -64.98945150465131],
-  ["Campo Deportivo Club Papagayos",-32.677929942273124, -64.98046943122368],
+  ["SUM Municipal", -32.67411402758061, -64.98945150465131],
+  ["Campo Deportivo Club Papagayos", -32.677929942273124, -64.98046943122368],
   ["Cajero automático Banco Nación", -32.675425026952176, -64.99048077667592],
   ["Plaza Integradora Infantil", -32.674590524061394, -64.98962522756847],
   ["Cementerio de Papagayos", -32.67845912124752, -65.00025442728698],
   ["Campo de Jineteadas", -32.67793985969311, -65.00630280860547],
- ];
+];
 
 lugares.forEach(([nombre, lat, lon]) => {
   L.marker([lat, lon]).addTo(map).bindPopup(`<strong>${nombre}</strong>`);
