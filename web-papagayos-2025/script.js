@@ -45,7 +45,9 @@ const lugares = [
   ["SUM Municipal",-32.67411402758061, -64.98945150465131],
   ["Campo Deportivo Club Papagayos",-32.677929942273124, -64.98046943122368],
   ["Cajero automático Banco Nación", -32.675425026952176, -64.99048077667592],
-  ["Plaza Integradora Infantil", -32.674590524061394, -64.98962522756847],
+  ["Plaza Integradora Infantil", -32.674590524061394, -64.98962522756847],-32.67845912124752, -65.00025442728698
+  ["Cementerio de Papagayos", -32.67845912124752, -65.00025442728698],
+  ["Campo de Jineteadas", -32.67793985969311, -65.00630280860547],
  ];
 
 lugares.forEach(([nombre, lat, lon]) => {
