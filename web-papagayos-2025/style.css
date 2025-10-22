@@ -95,6 +95,10 @@ nav button {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
+  width: 100%;           /* 🔸 hace que todos tengan el mismo largo */
+  text-align: center;    /* 🔸 centra el texto */
+  display: block;        /* 🔸 evita diferencias entre a y button */
+  box-sizing: border-box;
 }
 
 nav button:hover {
