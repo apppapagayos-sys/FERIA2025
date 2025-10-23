@@ -320,29 +320,31 @@ a button:hover {
   gap: 15px;
 }
 
-.social-links a {
+/* 🔹 Redes sociales en una sola línea */
+.social-links {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* espacio entre cada red */
+  flex-wrap: wrap; /* permite que se acomoden en móvil */
+}
+
+.social-links .social-item {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  color: white;
-  font-size: 1.4rem;
-  transition: 0.3s ease;
+  gap: 8px;
+  color: var(--texto);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Colores personalizados por red */
-.social-links a.facebook {
-  background-color: #1877f2; /* Azul de Facebook */
+.social-links .social-item i {
+  font-size: 1.6rem;
 }
 
-.social-links a.instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-/* Efecto hover */
-.social-links a:hover {
-  transform: scale(1.15);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.social-links .social-item:hover {
+  color: var(--verde);
+  transform: translateY(-3px);
 }
