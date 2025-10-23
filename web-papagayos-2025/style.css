@@ -311,3 +311,22 @@ a button:hover {
 .whatsapp-float i {
   vertical-align: middle;
 }
+/* 🔹 Redes sociales sin fondo */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: var(--texto);
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Colores al pasar el mouse */
+.social-links a:hover {
+  color: var(--verde);
+  transform: scale(1.2);
+}
