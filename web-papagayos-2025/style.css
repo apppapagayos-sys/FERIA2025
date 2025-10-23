@@ -312,21 +312,37 @@ a button:hover {
   vertical-align: middle;
 }
 /* 🔹 Redes sociales sin fondo */
+/* 🔹 Redes sociales en contacto */
 .social-links {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .social-links a {
-  color: var(--texto);
-  font-size: 2rem;
-  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.4rem;
+  transition: 0.3s ease;
 }
 
-/* Colores al pasar el mouse */
+/* Colores personalizados por red */
+.social-links a.facebook {
+  background-color: #1877f2; /* Azul de Facebook */
+}
+
+.social-links a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Efecto hover */
 .social-links a:hover {
-  color: var(--verde);
-  transform: scale(1.2);
+  transform: scale(1.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
