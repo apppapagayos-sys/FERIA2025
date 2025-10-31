@@ -26,7 +26,7 @@
   </header>
 
   <main class="wrap">
-    <!-- HOME / HERO -->
+    <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero-left card">
         <span class="pill">✨ Propuesta cultural · Cine al aire libre</span>
@@ -66,26 +66,20 @@
       </aside>
     </section>
 
-    <!-- SCHEDULE -->
+    <!-- PROGRAMACIÓN -->
     <section id="schedule" class="card section">
       <h3>Programación</h3>
       <p class="muted">Seleccioná una función para ver detalles y comprar entradas.</p>
-
-      <div id="moviesList" class="movies-grid">
-        <!-- JS inyecta las tarjetas de películas -->
-      </div>
+      <div id="moviesList" class="movies-grid"></div>
     </section>
 
-    <!-- TICKETS / SHOP -->
+    <!-- ENTRADAS -->
     <section id="tickets" class="card section">
       <h3>Entradas y Reservas</h3>
-
       <div class="shop-grid">
         <div class="cart card" id="cartCard">
           <h4>Carrito</h4>
-          <ul id="cartList" class="cart-list">
-            <!-- items -->
-          </ul>
+          <ul id="cartList" class="cart-list"></ul>
           <div class="cart-total" id="cartTotal">Total: $0</div>
           <div class="cart-actions">
             <button class="btn btn-primary" id="checkoutBtn">Finalizar compra</button>
@@ -102,7 +96,7 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACTO -->
     <section id="contact" class="card section">
       <h3>Contacto y Reservas directas</h3>
       <form id="contactForm" class="contact-form">
@@ -123,14 +117,13 @@
       </form>
     </section>
 
-    <!-- CONFIRMATION MODAL -->
+    <!-- MODAL -->
     <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
       <div class="modal-card">
         <button class="modal-close" id="modalClose">&times;</button>
         <div id="modalContent"></div>
       </div>
     </div>
-
   </main>
 
   <footer class="site-footer wrap">
