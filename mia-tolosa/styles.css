@@ -5,80 +5,77 @@
   --green: #5fb27c;
   --brown: #4b3621;
   --seat: #ff5a3c;
-  --glass: rgba(255,255,255,0.08);
-  --max-width: 1100px;
   --card-bg: rgba(255,255,255,0.92);
+  --max-width: 1100px;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; -webkit-font-smoothing:antialiased;}
+html,body{margin:0;height:100%;font-family:Inter, system-ui, Arial;-webkit-font-smoothing:antialiased}
+body{background:linear-gradient(180deg,var(--sunset-1),var(--sunset-2));color:var(--brown)}
 .wrap{max-width:var(--max-width);margin:0 auto;padding:20px}
 
 /* Header */
 .site-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
-.brand{display:flex;gap:12px;align-items:center}
-.logo-img{width:68px;height:68px;border-radius:12px;object-fit:cover;box-shadow:0 8px 20px rgba(75,54,33,0.12);border:3px solid rgba(255,255,255,0.6)}
-.site-title{margin:0;font-size:20px;font-weight:800;color:var(--brown)}
-.site-sub{margin:0;font-size:12px;color:rgba(75,54,33,0.7)}
+.brand{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.logo-img{
+  width:120px;height:120px;
+  border-radius:16px;
+  object-fit:contain;
+  background:white;
+  padding:8px;
+  box-shadow:0 6px 20px rgba(75,54,33,0.25);
+  border:4px solid rgba(255,255,255,0.8);
+  display:block;
+  margin:0 auto;
+}
+.site-title{margin:8px 0 2px;font-size:22px;font-weight:800;color:var(--brown)}
+.site-sub{margin:0;font-size:13px;color:rgba(75,54,33,0.7)}
 
-.main-nav{display:flex;gap:8px;align-items:center}
+.main-nav{display:flex;gap:8px}
 .nav-btn{background:transparent;border:0;padding:8px 10px;border-radius:8px;font-weight:700;cursor:pointer;color:var(--brown)}
-.nav-btn:hover{background:rgba(255,255,255,0.12)}
+.nav-btn:hover{background:rgba(255,255,255,0.15)}
 
-/* Hero */
-body{background: linear-gradient(180deg,var(--sunset-1), var(--sunset-2));color:var(--brown)}
+/* Layout */
 .card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(75,54,33,0.06)}
 .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start;margin-top:12px}
-.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.12);font-weight:800}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.2);font-weight:800}
 .lead{color:rgba(75,54,33,0.85);margin-top:8px}
 .cta-row{display:flex;gap:8px;margin-top:12px}
 .btn{padding:8px 12px;border-radius:10px;border:2px solid rgba(75,54,33,0.08);cursor:pointer;background:transparent}
-.btn-primary{background:var(--brown);color:#fff;border:0}
+.btn-primary{background:var(--brown);color:white;border:0}
 
-/* small components */
-.quick-stats{display:flex;gap:12px;margin-top:16px;align-items:center}
+/* Section elements */
+.section{margin-top:18px}
 .muted{color:rgba(75,54,33,0.6)}
-.tag{display:inline-block;padding:6px 8px;border-radius:8px;background:var(--gold);font-weight:700}
+.tag{padding:6px 8px;border-radius:8px;background:var(--gold);font-weight:700}
 .tag-row{display:flex;gap:8px;margin-top:10px}
 .map-placeholder{height:120px;border-radius:8px;background:linear-gradient(180deg,#eef7f0,#dff1e2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#2b5b33;margin-top:12px}
 
-/* sections */
-.section{margin-top:18px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-.movies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
-.movie-card{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fffaf8,#fff3ee);border:1px solid rgba(75,54,33,0.04)}
-.movie-card h4{margin:0}
+/* Movies */
+.movies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:12px}
+.movie-card{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:10px;background:white;border:1px solid rgba(75,54,33,0.04)}
+.movie-img{width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
 .movie-meta{font-size:13px;color:rgba(75,54,33,0.7)}
 
-/* gallery */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
-.gallery-item{height:140px;border-radius:10px;background:linear-gradient(180deg,#fff7f3,#ffece6);display:flex;align-items:center;justify-content:center;font-weight:700}
-
-/* tickets / shop */
+/* Shop */
 .shop-grid{display:grid;grid-template-columns:360px 1fr;gap:12px;margin-top:12px}
 .cart-list{list-style:none;padding:0;margin:8px 0}
-.cart-list li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,0.04)}
+.cart-list li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,0.1)}
 .cart-total{font-weight:800;margin-top:10px}
 .cart-actions{display:flex;gap:8px;margin-top:10px}
 
-.ticket-panel .seat-select{display:flex;gap:8px;align-items:center;margin-top:8px}
-.seat{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:6px;background:rgba(255,255,255,0.85);border:1px solid rgba(0,0,0,0.06);cursor:pointer}
-.seat.selected{background:var(--seat);color:white;border:0}
-
-/* forms */
-.contact-form input, .contact-form textarea, input, textarea {width:100%;padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-top:6px}
+/* Form */
+.contact-form input,.contact-form textarea{width:100%;padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);margin-top:6px}
 .form-actions{margin-top:10px}
 
-/* modal */
+/* Modal */
 .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);z-index:999}
 .modal.hidden{display:none}
 .modal-card{background:white;padding:18px;border-radius:12px;max-width:520px;width:96%;position:relative}
 .modal-close{position:absolute;top:8px;right:10px;border:0;background:transparent;font-size:22px;cursor:pointer}
 
-/* responsive */
+/* Responsive */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
   .shop-grid{grid-template-columns:1fr}
-  .grid-3{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr}
 }
