@@ -52,7 +52,7 @@ button, .btn {
   transition: 0.3s;
 }
 
-button:hover {
+button:hover, .btn:hover {
   background-color: #a040ff;
 }
 
@@ -64,16 +64,42 @@ button:hover {
   border-radius: 10px;
 }
 
+/* === GALERÍA === */
+.fotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 16px; /* espacio entre imágenes */
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .fotos img {
-  width: 200px;
-  height: 150px;
-  margin: 10px;
+  width: 100%;
+  height: auto;
+  max-width: 280px; /* controla el tamaño máximo */
   border-radius: 10px;
   transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(127, 0, 255, 0.2);
 }
 
 .fotos img:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
+}
+
+/* Responsive: 2 columnas en tablets */
+@media (max-width: 768px) {
+  .fotos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 1 columna en móviles */
+@media (max-width: 480px) {
+  .fotos {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
